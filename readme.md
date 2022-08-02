@@ -1,7 +1,25 @@
-# myUI5App
+# Getting Started
 
-Insert the purpose of this project and some interesting infos here
+Welcome to your new project.
 
-## Credits
+It contains these folders and files, following our recommended project layout:
 
-This project has been generated with 💙 and [easy-ui5](https://github.com/SAP)
+File or Folder | Purpose
+---------|----------
+`app/` | content for UI frontends goes here
+`db/` | your domain models and data go here
+`srv/` | your service models and code go here
+`package.json` | project metadata and configuration
+`readme.md` | this getting started guide
+
+
+## Next Steps
+
+- Open a new terminal and run `cds watch` 
+- (in VS Code simply choose _**Terminal** > Run Task > cds watch_)
+- Start adding content, for example, a [db/schema.cds](db/schema.cds).
+
+
+## Learn More
+
+Learn more at https://cap.cloud.sap/docs/get-started/.
