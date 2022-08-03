@@ -14,7 +14,7 @@ modules:
     builder: custom
     commands:
     - npm install
-    - npm run build:ui --prefix ..
+    - npm run build
 - name: myUI5App-app-content
   type: com.sap.application.content
   path: .
