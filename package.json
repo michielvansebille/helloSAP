@@ -7,12 +7,14 @@
     "private": true,
     "dependencies": {
         "@sap/cds": "^5",
-        "express": "^4"
+        "@sap/ux-ui5-tooling": "^1.6.7",
+        "express": "^4",
+        "mbt": "^1.2.18"
     },
     "devDependencies": {
         "@sap/ux-specification": "^1.102.2",
-        "sqlite3": "^5.0.2",
-        "rimraf": "^3.0.2"
+        "rimraf": "^3.0.2",
+        "sqlite3": "^5.0.2"
     },
     "scripts": {
         "start": "cds run",
