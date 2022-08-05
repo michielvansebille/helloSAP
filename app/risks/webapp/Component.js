@@ -1,12 +1,9 @@
-sap.ui.define(
-    ["sap/fe/core/AppComponent"],
-    function (Component) {
-        "use strict";
+sap.ui.define(["sap/fe/core/AppComponent"], function(AppComponent) {
+    'use strict';
 
-        return Component.extend("ns.risks.Component", {
-            metadata: {
-                manifest: "json"
-            }
-        });
-    }
-);
+    return AppComponent.extend("ns.risks.Component", {
+        metadata: {
+            manifest: "json"
+        }
+    });
+});

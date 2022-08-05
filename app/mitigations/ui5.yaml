@@ -1,6 +1,6 @@
 specVersion: '2.4'
 metadata:
-  name: 'risks'
+  name: 'mitigations'
 type: application
 server:
   customMiddleware:

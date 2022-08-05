@@ -1,60 +1,38 @@
 {
-    "_version": "1.40.0",
+    "_version": "1.32.0",
     "sap.app": {
         "id": "ns.risks",
         "type": "application",
         "i18n": "i18n/i18n.properties",
         "applicationVersion": {
-            "version": "0.0.1"
+            "version": "1.0.0"
         },
         "title": "{{appTitle}}",
         "description": "{{appDescription}}",
-        "resources": "resources.json",
-        "sourceTemplate": {
-            "id": "@sap/generator-fiori:lrop",
-            "version": "1.6.7",
-            "toolsId": "8139d585-5af3-497e-9b4f-31c1bac4585f"
-        },
-        "crossNavigation": {
-          "inbounds": {
-            "Risks-display": {
-              "signature": {
-                "parameters": {},
-                "additionalParameters": "allowed"
-              },
-              "semanticObject": "Risks",
-              "action": "display"
-            }
-        },
-        "crossNavigation": {
-          "inbounds": {
-            "Mitigations-display": {
-              "signature": {
-                "parameters": {},
-                "additionalParameters": "allowed"
-              },
-              "semanticObject": "Mitigations",
-              "action": "display"
-            }
-          }
-        },
         "dataSources": {
             "mainService": {
                 "uri": "/service/risk/",
                 "type": "OData",
                 "settings": {
-                    "annotations": [
-                        "annotation"
-                    ],
-                    "localUri": "localService/metadata.xml",
                     "odataVersion": "4.0"
                 }
-            },
-            "annotation": {
-                "type": "ODataAnnotation",
-                "uri": "annotations/annotation.xml",
-                "settings": {
-                    "localUri": "annotations/annotation.xml"
+            }
+        },
+        "offline": false,
+        "resources": "resources.json",
+        "sourceTemplate": {
+            "id": "ui5template.fiorielements.v4.lrop",
+            "version": "1.0.0"
+        },
+        "crossNavigation": {
+            "inbounds": {
+                "Risks-display": {
+                    "signature": {
+                        "parameters": {},
+                        "additionalParameters": "allowed"
+                    },
+                    "semanticObject": "Risks",
+                    "action": "display"
                 }
             }
         }
@@ -76,26 +54,25 @@
         }
     },
     "sap.ui5": {
-        "flexEnabled": true,
+        "resources": {
+            "js": [],
+            "css": []
+        },
         "dependencies": {
-            "minUI5Version": "1.104.2",
+            "minUI5Version": "1.95.0",
             "libs": {
-                "sap.m": {},
                 "sap.ui.core": {},
-                "sap.ushell": {},
                 "sap.fe.templates": {}
             }
         },
-        "contentDensities": {
-            "compact": true,
-            "cozy": true
-        },
         "models": {
+            "@i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "uri": "i18n/i18n.properties"
+            },
             "i18n": {
                 "type": "sap.ui.model.resource.ResourceModel",
-                "settings": {
-                    "bundleName": "ns.risks.i18n.i18n"
-                }
+                "uri": "i18n/i18n.properties"
             },
             "": {
                 "dataSource": "mainService",
@@ -106,14 +83,7 @@
                     "autoExpandSelect": true,
                     "earlyRequests": true
                 }
-            },
-            "@i18n": {
-                "type": "sap.ui.model.resource.ResourceModel",
-                "uri": "i18n/i18n.properties"
             }
-        },
-        "resources": {
-            "css": []
         },
         "routing": {
             "routes": [
@@ -159,15 +129,27 @@
                     }
                 }
             }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
         }
     },
+    "sap.platform.abap": {
+        "_version": "1.1.0",
+        "uri": ""
+    },
+    "sap.platform.hcp": {
+        "_version": "1.1.0",
+        "uri": ""
+    },
     "sap.fiori": {
+        "_version": "1.1.0",
         "registrationIds": [],
         "archeType": "transactional"
     },
     "sap.cloud": {
-    "public": true,
-    "service": "cpapp.service"
-  }
-}
+        "public": true,
+        "service": "cpapp.service"
+    }
 }
