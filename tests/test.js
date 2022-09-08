@@ -19,7 +19,7 @@ describe("Products Operation", () => {
 	describe("GET /catalog/Products", () => {
 		it("+ should return a list of products", (done) => {
 			chai.request(app)
-				.get("/Risks")
+				.get("/service/risk/")
 				.end((error, response) => {
 					try {
 						response.should.have.status(200);
