@@ -1,7 +1,7 @@
 _schema-version: "3.1"
 ID: cpapp
 description: A simple CAP project.
-version: 1.0.2
+version: 1.0.3
 modules:
 - name: cpapp-srv
   type: nodejs
@@ -138,7 +138,7 @@ resources:
             Type: HTTP
             URL: https://ui5.sap.com
           existing_destinations_policy: update
-      version: 1.0.2
+      version: 1.0.3
     service: destination
     service-plan: lite
 - name: cpapp-html5-repo-host
