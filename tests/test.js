@@ -15,14 +15,15 @@ before((done) => {
 	});
 });
 
-describe("Products Operation", () => {
-	describe("GET /catalog/Products", () => {
-		it("+ should return a list of products", (done) => {
+describe("Risks Service", () => {
+	describe("GET /service/risk", () => {
+		it("+ should return a list of risks", (done) => {
 			chai.request(app)
 				.get("/service/risk/")
 				.end((error, response) => {
 					try {
 						response.should.have.status(200);
+						response.body.value.should.be.an("array").to.have.lengthOf(2);
 						done();
 					} catch (error) {
 						done(error);
