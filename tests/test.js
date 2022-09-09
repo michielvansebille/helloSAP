@@ -17,7 +17,7 @@ before((done) => {
 
 describe("Risks Service", () => {
 	describe("GET /service/risk", () => {
-		it("+ should return a list of risks", (done) => {
+		it("+ should return a list of services for Risks", (done) => {
 			chai.request(app)
 				.get("/service/risk/")
 				.end((error, response) => {
